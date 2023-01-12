@@ -1,2 +1,15 @@
-<button class="btn btn-primary" [disabled] ="!allowNewServer">Add anew server</button>
+
+<label for="server">Server name</label>
+<input type="text" name="server" class="form-control" (input)="onUpdateServerName($event)"/>
+
+<p>{{ serverName }}</p>
+
+
+<label for="serverBinding">Two way data binding</label>
+<input type="text" name="serverBinding" class="form-control" [(ngModel)]="serverNameBinding"/>
+
+<p>{{ serverNameBinding }}</p>
+
+<button class="btn btn-primary" [disabled] ="!allowNewServer" (click)="onCreateServer()">Add anew server</button>
+<p>{{ serverCreationStatus }}</p>
 <h3>Server with Id {{ serverId }} is {{ getServerStatus() }}</h3>

@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
+})
+export class UserComponent {
+  username = "";
+  clickable = false;
+
+  onInput()
+  {
+    this.username != "" ? this.clickable = true : this.clickable = false; 
+  }
+
+  onClick()
+  {
+    this.username = "";
+  }
+}

@@ -1,0 +1,7 @@
+<h2>Data binding the username</h2>
+
+<input type="text" [(ngModel)]="username" (input)="onInput()">
+<p>The name is {{ username }}</p>
+
+<p>The below button can only be clicked if the username is not empty</p>
+<button [disabled] ="!clickable" class="btn btn-primary" (click)="onClick()">Click</button>
