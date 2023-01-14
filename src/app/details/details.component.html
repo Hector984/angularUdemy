@@ -1,0 +1,3 @@
+<button class="btn btn-success" (click)="clickShowDetails()">Show details</button>
+
+<p [ngClass]="{display: showDetails, changeColor: detailsCounter > 5}" [ngStyle]="{backgroundColor: getColor()}">Detalle {{ detailsCounter }}</p>
